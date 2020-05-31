@@ -22,6 +22,19 @@ public class AlunoController {
 		Aluno aluno = this.transformarDtoEntity(dto);		
 		repository.save(aluno);
 	}
+	/// 
+	//@PostMapping
+	//@RequestMapping("/logar")
+	//public void alunoLogin(@RequestBody AlunoDto alunodto) {		
+	//	return repository.findByEmailAndSenha(alunodto.getEmail(), alunodto.getSenha());
+	//}
+	///
+
+	@PostMapping
+	@RequestMapping("/logar")
+	public Aluno alunoLogin(@RequestBody AlunoDto alunodto) {		
+		return repository.findByEmailAndSenha(alunodto.getEmail(), alunodto.getSenha());
+	}
 	
 	//Mapping
 	private Aluno transformarDtoEntity(AlunoDto dto) {
@@ -32,7 +45,7 @@ public class AlunoController {
 		a.setEmail(dto.getEmail());
 		a.setId_curso(dto.getId_curso());
 		a.setData_nasc(dto.getdata_nasc());
-		
+		a.setSenha(dto.getSenha());
 		return a;
 	}
 }

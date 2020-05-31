@@ -17,7 +17,8 @@ public class AlunoDto implements Serializable {
 	private String email;
 	private Integer id_curso;
 	private Date data_nasc;
-		
+    private String senha;
+    
 	public AlunoDto() {}
 	
 	public String getNome() {
@@ -60,6 +61,16 @@ public class AlunoDto implements Serializable {
 	public void setData_nasc(Date data_nasc) {
 		this.data_nasc = data_nasc;
 	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	
 
 	@Override
 	public String toString() {

@@ -36,6 +36,8 @@ public class Aluno {
 	@Column(name = "data_nasc", nullable = false)
 	private Date data_nasc;
 	
+	private String senha;
+	
 	public Long getId() {
 		return id;
 	}
@@ -91,4 +93,17 @@ public class Aluno {
 	public void setData_nasc(Date data_nasc) {
 		this.data_nasc = data_nasc;
 	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+
+
+
+
 }
